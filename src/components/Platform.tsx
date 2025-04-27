@@ -7,7 +7,7 @@ const Platform = ({
 }) => {
   const PLATFORMS = [{ value: "gitlab", label: "GitLab" }];
   return (
-    <form className="p-4 bg-white rounded shadow">
+    <form className="p-4 bg-white rounded-lg shadow-lg">
       <label
         className="block mb-2 text-lg font-medium text-gray-700"
         htmlFor="platform"
@@ -17,7 +17,7 @@ const Platform = ({
       <select
         id="platform"
         name="platform"
-        className="block w-1/4 mx-auto p-2 border border-gray-300 rounded"
+        className="block w-1/2 mx-auto p-2 border border-gray-300 rounded"
         defaultValue=""
         onChange={(e) => {
           setPipelineConfig({

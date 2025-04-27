@@ -8,7 +8,9 @@ function App() {
       <p className="text-lg text-gray-600 font-semibold">
         0.1.0 of your pipeline
       </p>
-      <PipelineWizard />
+      <div className="w-4/5 mx-auto">
+        <PipelineWizard />
+      </div>
     </div>
   );
 }

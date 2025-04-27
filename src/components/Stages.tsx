@@ -9,12 +9,14 @@ const STAGES = [
 const Stages = ({
   pipelineConfig,
   setPipelineConfig,
+  setCurrentStep,
 }: {
   pipelineConfig: any;
   setPipelineConfig: (config: any) => void;
+  setCurrentStep: (step: number) => void;
 }) => {
   return (
-    <form className="p-4 bg-white rounded shadow">
+    <form className="p-4 bg-white rounded-lg shadow-lg">
       <label className="block mb-2 text-lg font-medium text-gray-700">
         2. Select your pipeline stages
       </label>
@@ -45,6 +47,13 @@ const Stages = ({
           </div>
         ))}
       </div>
+      <button
+        type="button"
+        className="mt-4 w-20 bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-700 transition"
+        onClick={() => setCurrentStep(2)}
+      >
+        Next
+      </button>
     </form>
   );
 };
