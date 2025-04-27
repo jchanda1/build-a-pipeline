@@ -29,11 +29,13 @@ const PipelineWizard = () => {
           pipelineConfig={pipelineConfig}
           setPipelineConfig={setPipelineConfig}
           setCurrentStep={setCurrentStep}
+          currentStep={currentStep}
         />
         <ConfigureStages
           pipelineConfig={pipelineConfig}
           setPipelineConfig={setPipelineConfig}
           currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
         />
       </div>
     </div>
