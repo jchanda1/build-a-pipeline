@@ -16,7 +16,6 @@ const PipelineWizard = () => {
   });
 
   const [currentStep, setCurrentStep] = useState(1);
-  const [generatingYaml, setGeneratingYaml] = useState(false);
 
   console.log(pipelineConfig);
 
