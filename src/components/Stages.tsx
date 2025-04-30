@@ -27,7 +27,7 @@ const Stages = ({
         <label className="block mb-2 text-lg font-medium text-gray-700">
           2. Select your pipeline stages
         </label>
-        <div className="flex flex-wrap gap-20">
+        <div className="flex flex-wrap gap-20 justify-center">
           {STAGES.map((stage) => (
             <div key={stage.id} className="flex items-center">
               <input
@@ -35,7 +35,7 @@ const Stages = ({
                 name="stages"
                 type="checkbox"
                 value={stage.id}
-                className="h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                className="h-4 w-4 text-primary-500 border-gray-300 rounded"
                 onChange={(e) => {
                   const { checked } = e.target;
                   setPipelineConfig({
