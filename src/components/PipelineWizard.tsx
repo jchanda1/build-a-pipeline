@@ -19,7 +19,7 @@ const PipelineWizard = () => {
   console.log(pipelineConfig);
 
   return (
-    <div className="bg-gradient-to-b from-orange-500 to-orange-300 shadow-lg rounded-3xl p-10 mt-5 animate-fade-in">
+    <div className="bg-gradient-to-b from-primary-500 to-primary-300 shadow-lg rounded-3xl p-10 mt-5 animate-fade-in">
       <div className="mx-auto space-y-5">
         <Platform
           pipelineConfig={pipelineConfig}
