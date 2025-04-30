@@ -1,4 +1,4 @@
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { Prism } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useState } from "react";
 
@@ -62,7 +62,7 @@ install:
             Generated Pipeline Configuration
           </h2>
           <div className="rounded-lg overflow-hidden">
-            <SyntaxHighlighter
+            <Prism
               language="yaml"
               style={vscDarkPlus}
               customStyle={{
@@ -75,7 +75,7 @@ install:
               }}
             >
               {sampleYaml}
-            </SyntaxHighlighter>
+            </Prism>
           </div>
           <div className="mt-4 flex justify-center">
             <button
