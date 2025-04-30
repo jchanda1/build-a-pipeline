@@ -2,6 +2,7 @@ import { useState } from "react";
 import Platform from "./Platform";
 import Stages from "./Stages";
 import ConfigureStages from "./ConfigureStages";
+import GenerateYaml from "./GenerateYaml";
 
 const PipelineWizard = () => {
   const [pipelineConfig, setPipelineConfig] = useState({
@@ -15,6 +16,7 @@ const PipelineWizard = () => {
   });
 
   const [currentStep, setCurrentStep] = useState(1);
+  const [generatingYaml, setGeneratingYaml] = useState(false);
 
   console.log(pipelineConfig);
 
@@ -37,6 +39,7 @@ const PipelineWizard = () => {
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
         />
+        <GenerateYaml pipelineConfig={pipelineConfig} />
       </div>
     </div>
   );
