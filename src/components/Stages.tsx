@@ -56,7 +56,7 @@ const Stages = ({
         </div>
         <button
           type="button"
-          className="mt-4 w-20 bg-indigo-600 text-white font-semibold py-2 px-4 rounded hover:bg-indigo-700 transition"
+          className="mt-4 w-20 bg-orange-500 text-white font-semibold py-2 px-4 rounded hover:bg-orange-600 transition"
           onClick={() => setCurrentStep(2)}
         >
           Next
