@@ -1,4 +1,6 @@
 // src/components/Stages.tsx
+import NextButton from "./NextButton";
+
 const STAGES = [
   { id: "install", label: "Install" },
   { id: "validate", label: "Validate" },
@@ -54,13 +56,12 @@ const Stages = ({
             </div>
           ))}
         </div>
-        <button
-          type="button"
-          className="mt-4 w-20 bg-primary-500 text-white font-semibold py-2 px-4 rounded hover:bg-primary-600 transition"
-          onClick={() => setCurrentStep(2)}
-        >
-          Next
-        </button>
+        <div className="mt-4 flex justify-center">
+          <NextButton
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
+        </div>
       </form>
     </div>
   );

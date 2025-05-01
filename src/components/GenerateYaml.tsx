@@ -46,9 +46,6 @@ install:
     <div className="p-4 bg-white rounded-lg shadow-lg">
       {!showYaml ? (
         <div className="flex flex-col items-center space-y-4">
-          <h2 className="text-lg font-bold text-gray-700">
-            Ready to generate your pipeline?
-          </h2>
           <button
             onClick={() => setShowYaml(true)}
             className="px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition text-lg font-semibold"

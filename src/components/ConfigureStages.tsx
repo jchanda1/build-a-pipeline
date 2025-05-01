@@ -1,3 +1,6 @@
+import NextButton from "./NextButton";
+import PreviousButton from "./PreviousButton";
+
 const ConfigureStages = ({
   pipelineConfig,
   setPipelineConfig,
@@ -109,30 +112,33 @@ const ConfigureStages = ({
 
   if (currentStep === 2) {
     return (
-      <div className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4">
+      <form className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4">
+        <label className="block mb-2 text-lg font-medium text-gray-700">
+          3. Extra configuration...
+        </label>
         {pipelineStages.map((stage: string) => {
           return stageForms.find((form) => form.name === stage)?.form;
         })}
         <div className="flex space-x-4 justify-center">
-          <button
-            type="button"
-            className="px-4 py-2 bg-white text-primary-500 border border-primary-500 rounded hover:bg-primary-50 transition"
-            onClick={() => setCurrentStep(1)}
-          >
-            Previous
-          </button>
-          <button
-            type="button"
-            className="px-4 py-2 bg-primary-500 text-white rounded hover:bg-primary-600 transition"
-            onClick={() => setCurrentStep(2)}
-          >
-            Next
-          </button>
+          <PreviousButton
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
+          <NextButton
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
         </div>
-      </div>
+      </form>
     );
   } else {
-    return <div className="h-48 bg-gray-300 opacity-50 rounded-lg shadow-lg" />;
+    return (
+      <form className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4 opacity-50">
+        <label className="block mb-2 text-lg font-medium text-gray-700">
+          3. Extra configuration...
+        </label>
+      </form>
+    );
   }
 };
 
