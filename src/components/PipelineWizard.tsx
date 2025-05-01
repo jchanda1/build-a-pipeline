@@ -40,7 +40,11 @@ const PipelineWizard = () => {
           currentStep={currentStep}
           setCurrentStep={setCurrentStep}
         />
-        <GenerateYaml pipelineConfig={pipelineConfig} />
+        <GenerateYaml
+          pipelineConfig={pipelineConfig}
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
+        />
       </div>
     </div>
   );

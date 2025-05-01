@@ -1,6 +1,7 @@
 import { Prism } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useState } from "react";
+import PipelineSteps from "./PipelineSteps";
 
 interface GenerateYamlProps {
   pipelineConfig: {
@@ -12,9 +13,11 @@ interface GenerateYamlProps {
       lint: boolean;
     };
   };
+  currentStep: number;
+  setCurrentStep: (step: number) => void;
 }
 
-const GenerateYaml = ({ pipelineConfig }: GenerateYamlProps) => {
+const GenerateYaml = ({ currentStep, setCurrentStep }: GenerateYamlProps) => {
   const [showYaml, setShowYaml] = useState(false);
 
   // This will be replaced with actual YAML generation logic
@@ -43,7 +46,13 @@ install:
   };
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-lg">
+    <div
+      className={`p-4 bg-white rounded-lg shadow-lg ${
+        currentStep !== PipelineSteps.GENERATE_YAML
+          ? "opacity-50 pointer-events-none"
+          : "opacity-100"
+      }`}
+    >
       {!showYaml ? (
         <div className="flex flex-col items-center space-y-4">
           <button
