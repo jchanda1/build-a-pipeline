@@ -1,5 +1,6 @@
 // src/components/Stages.tsx
 import NextButton from "./NextButton";
+import PreviousButton from "./PreviousButton";
 
 const STAGES = [
   { id: "install", label: "Install" },
@@ -22,7 +23,7 @@ const Stages = ({
   return (
     <div
       className={`${
-        currentStep !== 1 ? "opacity-50 pointer-events-none" : "opacity-100"
+        currentStep !== 2 ? "opacity-50 pointer-events-none" : "opacity-100"
       }`}
     >
       <form className="p-4 bg-white rounded-lg shadow-lg">
@@ -56,7 +57,11 @@ const Stages = ({
             </div>
           ))}
         </div>
-        <div className="mt-4 flex justify-center">
+        <div className="flex space-x-4 justify-center mt-5">
+          <PreviousButton
+            currentStep={currentStep}
+            setCurrentStep={setCurrentStep}
+          />
           <NextButton
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}

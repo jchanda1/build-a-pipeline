@@ -25,6 +25,8 @@ const PipelineWizard = () => {
         <Platform
           pipelineConfig={pipelineConfig}
           setPipelineConfig={setPipelineConfig}
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
         />
         <Stages
           pipelineConfig={pipelineConfig}

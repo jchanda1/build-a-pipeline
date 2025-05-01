@@ -1,13 +1,23 @@
+interface PlatformProps {
+  pipelineConfig: any;
+  setPipelineConfig: (config: any) => void;
+  currentStep: number;
+  setCurrentStep: (step: number) => void;
+}
+
 const Platform = ({
   pipelineConfig,
   setPipelineConfig,
-}: {
-  pipelineConfig: any;
-  setPipelineConfig: (config: any) => void;
-}) => {
+  currentStep,
+  setCurrentStep,
+}: PlatformProps) => {
   const PLATFORMS = [{ value: "gitlab", label: "GitLab" }];
   return (
-    <form className="p-4 bg-white rounded-lg shadow-lg">
+    <form
+      className={`p-4 bg-white rounded-lg shadow-lg ${
+        currentStep !== 1 ? "opacity-50 pointer-events-none" : "opacity-100"
+      }`}
+    >
       <label
         className="block mb-2 text-lg font-medium text-gray-700"
         htmlFor="platform"
@@ -24,6 +34,7 @@ const Platform = ({
             ...pipelineConfig,
             platform: e.target.value,
           });
+          setCurrentStep(2);
         }}
       >
         <option value="" disabled>

@@ -110,7 +110,7 @@ const ConfigureStages = ({
     { name: "validate", form: validateStageForm },
   ];
 
-  if (currentStep === 2) {
+  if (currentStep === 3) {
     return (
       <form className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4">
         <label className="block mb-2 text-lg font-medium text-gray-700">
