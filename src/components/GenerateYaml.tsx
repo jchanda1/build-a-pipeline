@@ -17,7 +17,7 @@ interface GenerateYamlProps {
   setCurrentStep: (step: number) => void;
 }
 
-const GenerateYaml = ({ currentStep, setCurrentStep }: GenerateYamlProps) => {
+const GenerateYaml = ({ currentStep }: GenerateYamlProps) => {
   const [showYaml, setShowYaml] = useState(false);
 
   // This will be replaced with actual YAML generation logic
