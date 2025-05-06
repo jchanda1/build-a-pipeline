@@ -25,7 +25,7 @@ const ConfigureStages = ({
   };
 
   const installStageForm = (
-    <form className="mx-auto p-4 bg-white rounded-lg shadow-lg">
+    <form className="mx-auto p-4 bg-accent rounded-lg shadow-lg">
       <label className="block mb-4 text-lg font-medium text-gray-700">
         Do you want to use a cache?
       </label>
@@ -67,7 +67,7 @@ const ConfigureStages = ({
   );
 
   const validateStageForm = (
-    <form className="mx-auto p-4 bg-white rounded-lg shadow-lg">
+    <form className="mx-auto p-4 bg-accent rounded-lg shadow-lg">
       <h2 className="block mb-4 text-lg font-bold text-gray-700">
         Validate stage
       </h2>

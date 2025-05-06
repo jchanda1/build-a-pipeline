@@ -20,7 +20,7 @@ const PipelineWizard = () => {
   console.log(pipelineConfig);
 
   return (
-    <div className="bg-base-200 shadow-lg rounded-3xl p-10 mt-5 animate-slide-in">
+    <div className="bg-primary shadow-lg rounded-3xl p-10 mt-5 animate-slide-in">
       <div className="mx-auto space-y-5">
         <Platform
           pipelineConfig={pipelineConfig}
