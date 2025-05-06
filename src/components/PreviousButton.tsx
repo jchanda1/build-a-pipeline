@@ -10,7 +10,7 @@ const PreviousButton = ({
   return (
     <button
       type="button"
-      className="px-4 py-2 bg-white text-primary-500 border border-primary-500 rounded-sm hover:bg-primary-50 transition"
+      className="btn btn-outline"
       onClick={() => setCurrentStep(currentStep - 1)}
     >
       Previous

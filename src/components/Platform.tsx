@@ -14,12 +14,12 @@ const Platform = ({
   const PLATFORMS = [{ value: "gitlab", label: "GitLab" }];
   return (
     <form
-      className={`p-4 bg-white rounded-lg shadow-lg ${
+      className={`p-4 bg-base-100 rounded-lg shadow-lg ${
         currentStep !== 1 ? "opacity-50 pointer-events-none" : "opacity-100"
       }`}
     >
       <label
-        className="block mb-2 text-lg font-medium text-gray-700"
+        className="block mb-2 text-lg font-medium text-base-content"
         htmlFor="platform"
       >
         1. Select your CI/CD platform
@@ -27,7 +27,7 @@ const Platform = ({
       <select
         id="platform"
         name="platform"
-        className="block w-1/2 mx-auto p-2 border border-gray-300 rounded-sm"
+        className="select select-bordered w-1/2 mx-auto"
         defaultValue=""
         onChange={(e) => {
           setPipelineConfig({

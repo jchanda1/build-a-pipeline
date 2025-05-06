@@ -26,8 +26,8 @@ const Stages = ({
         currentStep !== 2 ? "opacity-50 pointer-events-none" : "opacity-100"
       }`}
     >
-      <form className="p-4 bg-white rounded-lg shadow-lg">
-        <label className="block mb-2 text-lg font-medium text-gray-700">
+      <form className="p-4 bg-base-100 rounded-lg shadow-lg">
+        <label className="block mb-2 text-lg font-medium text-base-content">
           2. Select your pipeline stages
         </label>
         <div className="flex flex-wrap gap-20 justify-center">
@@ -38,7 +38,7 @@ const Stages = ({
                 name="stages"
                 type="checkbox"
                 value={stage.id}
-                className="h-4 w-4 text-primary-500 border-gray-300 rounded-sm"
+                className="checkbox checkbox-primary"
                 onChange={(e) => {
                   const { checked } = e.target;
                   setPipelineConfig({
@@ -51,7 +51,10 @@ const Stages = ({
                   });
                 }}
               />
-              <label htmlFor={stage.id} className="ml-2 text-gray-700 text-md">
+              <label
+                htmlFor={stage.id}
+                className="ml-2 text-base-content text-md"
+              >
                 {stage.label}
               </label>
             </div>

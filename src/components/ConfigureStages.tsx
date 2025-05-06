@@ -112,8 +112,8 @@ const ConfigureStages = ({
 
   if (currentStep === 3) {
     return (
-      <form className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4">
-        <label className="block mb-2 text-lg font-medium text-gray-700">
+      <form className="p-4 bg-base-200 rounded-lg shadow-lg space-y-4">
+        <label className="block mb-2 text-lg font-medium text-base-content">
           3. Extra configuration...
         </label>
         {pipelineStages.map((stage: string) => {
@@ -133,8 +133,8 @@ const ConfigureStages = ({
     );
   } else {
     return (
-      <form className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4 opacity-50">
-        <label className="block mb-2 text-lg font-medium text-gray-700">
+      <form className="p-4 bg-base-200 rounded-lg shadow-lg space-y-4 opacity-50">
+        <label className="block mb-2 text-lg font-medium text-base-content">
           3. Extra configuration...
         </label>
       </form>

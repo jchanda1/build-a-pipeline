@@ -47,7 +47,7 @@ install:
 
   return (
     <div
-      className={`p-4 bg-white rounded-lg shadow-lg ${
+      className={`p-4 bg-base-100 rounded-lg shadow-lg ${
         currentStep !== PipelineSteps.GENERATE_YAML
           ? "opacity-50 pointer-events-none"
           : "opacity-100"
@@ -57,14 +57,14 @@ install:
         <div className="flex flex-col items-center space-y-4">
           <button
             onClick={() => setShowYaml(true)}
-            className="px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition text-lg font-semibold"
+            className="btn btn-primary text-lg font-semibold"
           >
             Generate your pipeline!
           </button>
         </div>
       ) : (
         <>
-          <h2 className="block mb-4 text-lg font-bold text-gray-700">
+          <h2 className="block mb-4 text-lg font-bold text-base-content">
             Generated Pipeline Configuration
           </h2>
           <div className="rounded-lg overflow-hidden">
@@ -84,10 +84,7 @@ install:
             </Prism>
           </div>
           <div className="mt-4 flex justify-center">
-            <button
-              onClick={handleDownload}
-              className="px-4 py-2 bg-primary-500 text-white rounded-sm hover:bg-primary-600 transition"
-            >
+            <button onClick={handleDownload} className="btn btn-primary">
               Download .gitlab-ci.yml
             </button>
           </div>
