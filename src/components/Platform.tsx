@@ -27,7 +27,7 @@ const Platform = ({
       <select
         id="platform"
         name="platform"
-        className="block w-1/2 mx-auto p-2 border border-gray-300 rounded"
+        className="block w-1/2 mx-auto p-2 border border-gray-300 rounded-sm"
         defaultValue=""
         onChange={(e) => {
           setPipelineConfig({

@@ -86,7 +86,7 @@ install:
           <div className="mt-4 flex justify-center">
             <button
               onClick={handleDownload}
-              className="px-4 py-2 bg-primary-500 text-white rounded hover:bg-primary-600 transition"
+              className="px-4 py-2 bg-primary-500 text-white rounded-sm hover:bg-primary-600 transition"
             >
               Download .gitlab-ci.yml
             </button>

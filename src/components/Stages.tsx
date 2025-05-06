@@ -38,7 +38,7 @@ const Stages = ({
                 name="stages"
                 type="checkbox"
                 value={stage.id}
-                className="h-4 w-4 text-primary-500 border-gray-300 rounded"
+                className="h-4 w-4 text-primary-500 border-gray-300 rounded-sm"
                 onChange={(e) => {
                   const { checked } = e.target;
                   setPipelineConfig({
