@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: bumblebee --default, coffee --prefersdark;
+  themes: light --default, black --prefersdark;
 }
 
 @keyframes slide-in {

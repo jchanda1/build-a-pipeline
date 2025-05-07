@@ -26,7 +26,7 @@ const ConfigureStages = ({
 
   const installStageForm = (
     <form className="mx-auto p-4 bg-accent rounded-lg shadow-lg">
-      <label className="block mb-4 text-lg font-medium text-gray-700">
+      <label className="block mb-4 text-lg font-medium text-accent-content">
         Do you want to use a cache?
       </label>
       <div className="flex justify-center space-x-8">
@@ -42,7 +42,7 @@ const ConfigureStages = ({
             }
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="cache-yes" className="ml-2 text-gray-700">
+          <label htmlFor="cache-yes" className="ml-2 text-accent-content">
             Yes
           </label>
         </div>
@@ -58,7 +58,7 @@ const ConfigureStages = ({
             }
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="cache-no" className="ml-2 text-gray-700">
+          <label htmlFor="cache-no" className="ml-2 text-accent-content">
             No
           </label>
         </div>
@@ -68,10 +68,10 @@ const ConfigureStages = ({
 
   const validateStageForm = (
     <form className="mx-auto p-4 bg-accent rounded-lg shadow-lg">
-      <h2 className="block mb-4 text-lg font-bold text-gray-700">
+      <h2 className="block mb-4 text-lg font-bold text-accent-content">
         Validate stage
       </h2>
-      <label className="block mb-2 text-md text-gray-700">
+      <label className="block mb-2 text-md text-accent-content">
         What do you want to do?
       </label>
       <div className="flex justify-center space-x-4">
@@ -84,7 +84,7 @@ const ConfigureStages = ({
             onChange={handleValidationChange}
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="format" className="ml-2 text-gray-700">
+          <label htmlFor="format" className="ml-2 text-accent-content">
             Format
           </label>
         </div>
@@ -97,7 +97,7 @@ const ConfigureStages = ({
             onChange={handleValidationChange}
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="lint" className="ml-2 text-gray-700">
+          <label htmlFor="lint" className="ml-2 text-accent-content">
             Lint
           </label>
         </div>
