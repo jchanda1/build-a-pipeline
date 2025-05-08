@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+import PipelineConfig from "../interfaces/PipelineConfig";
 import NextButton from "./NextButton";
 import PreviousButton from "./PreviousButton";
 
@@ -7,8 +9,8 @@ const ConfigureStages = ({
   currentStep,
   setCurrentStep,
 }: {
-  pipelineConfig: any;
-  setPipelineConfig: (config: any) => void;
+  pipelineConfig: PipelineConfig;
+  setPipelineConfig: Dispatch<SetStateAction<PipelineConfig>>;
   currentStep: number;
   setCurrentStep: (step: number) => void;
 }) => {

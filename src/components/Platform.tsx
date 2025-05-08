@@ -1,6 +1,9 @@
+import { Dispatch, SetStateAction } from "react";
+import PipelineConfig from "../interfaces/PipelineConfig";
+
 interface PlatformProps {
-  pipelineConfig: any;
-  setPipelineConfig: (config: any) => void;
+  pipelineConfig: PipelineConfig;
+  setPipelineConfig: Dispatch<SetStateAction<PipelineConfig>>;
   currentStep: number;
   setCurrentStep: (step: number) => void;
 }

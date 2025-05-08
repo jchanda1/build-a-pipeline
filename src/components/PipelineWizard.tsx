@@ -3,9 +3,10 @@ import Platform from "./Platform";
 import Stages from "./Stages";
 import ConfigureStages from "./ConfigureStages";
 import GenerateYaml from "./GenerateYaml";
+import PipelineConfig from "../interfaces/PipelineConfig";
 
 const PipelineWizard = () => {
-  const [pipelineConfig, setPipelineConfig] = useState({
+  const [pipelineConfig, setPipelineConfig] = useState<PipelineConfig>({
     platform: "",
     stages: [],
     cache: false,
