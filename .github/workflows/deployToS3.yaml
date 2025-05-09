@@ -37,4 +37,4 @@ jobs:
           aws-region: eu-west-2
 
       - name: Sync built files to S3 bucket
-        run: aws s3 sync ./dist s3://${{ variables.bucket_name }}/ --delete
+        run: aws s3 sync ./dist s3://${{ vars.BUCKET_NAME }}/ --delete
