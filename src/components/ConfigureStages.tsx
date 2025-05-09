@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+import PipelineConfig from "../interfaces/PipelineConfig";
 import NextButton from "./NextButton";
 import PreviousButton from "./PreviousButton";
 
@@ -7,8 +9,8 @@ const ConfigureStages = ({
   currentStep,
   setCurrentStep,
 }: {
-  pipelineConfig: any;
-  setPipelineConfig: (config: any) => void;
+  pipelineConfig: PipelineConfig;
+  setPipelineConfig: Dispatch<SetStateAction<PipelineConfig>>;
   currentStep: number;
   setCurrentStep: (step: number) => void;
 }) => {
@@ -25,8 +27,8 @@ const ConfigureStages = ({
   };
 
   const installStageForm = (
-    <form className="mx-auto p-4 bg-white rounded-lg shadow-lg">
-      <label className="block mb-4 text-lg font-medium text-gray-700">
+    <form className="mx-auto p-4 bg-accent rounded-lg shadow-lg">
+      <label className="block mb-4 text-lg font-medium text-accent-content">
         Do you want to use a cache?
       </label>
       <div className="flex justify-center space-x-8">
@@ -42,7 +44,7 @@ const ConfigureStages = ({
             }
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="cache-yes" className="ml-2 text-gray-700">
+          <label htmlFor="cache-yes" className="ml-2 text-accent-content">
             Yes
           </label>
         </div>
@@ -58,7 +60,7 @@ const ConfigureStages = ({
             }
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="cache-no" className="ml-2 text-gray-700">
+          <label htmlFor="cache-no" className="ml-2 text-accent-content">
             No
           </label>
         </div>
@@ -67,11 +69,11 @@ const ConfigureStages = ({
   );
 
   const validateStageForm = (
-    <form className="mx-auto p-4 bg-white rounded-lg shadow-lg">
-      <h2 className="block mb-4 text-lg font-bold text-gray-700">
+    <form className="mx-auto p-4 bg-accent rounded-lg shadow-lg">
+      <h2 className="block mb-4 text-lg font-bold text-accent-content">
         Validate stage
       </h2>
-      <label className="block mb-2 text-md text-gray-700">
+      <label className="block mb-2 text-md text-accent-content">
         What do you want to do?
       </label>
       <div className="flex justify-center space-x-4">
@@ -84,7 +86,7 @@ const ConfigureStages = ({
             onChange={handleValidationChange}
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="format" className="ml-2 text-gray-700">
+          <label htmlFor="format" className="ml-2 text-accent-content">
             Format
           </label>
         </div>
@@ -97,7 +99,7 @@ const ConfigureStages = ({
             onChange={handleValidationChange}
             className="h-4 w-4 text-primary-500 border-gray-300"
           />
-          <label htmlFor="lint" className="ml-2 text-gray-700">
+          <label htmlFor="lint" className="ml-2 text-accent-content">
             Lint
           </label>
         </div>
@@ -112,8 +114,8 @@ const ConfigureStages = ({
 
   if (currentStep === 3) {
     return (
-      <form className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4">
-        <label className="block mb-2 text-lg font-medium text-gray-700">
+      <form className="p-4 bg-base-200 rounded-lg shadow-lg space-y-4">
+        <label className="block mb-2 text-lg font-medium text-base-content">
           3. Extra configuration...
         </label>
         {pipelineStages.map((stage: string) => {
@@ -133,8 +135,8 @@ const ConfigureStages = ({
     );
   } else {
     return (
-      <form className="p-4 bg-secondary-300 rounded-lg shadow-lg space-y-4 opacity-50">
-        <label className="block mb-2 text-lg font-medium text-gray-700">
+      <form className="p-4 bg-base-200 rounded-lg shadow-lg space-y-4 opacity-50">
+        <label className="block mb-2 text-lg font-medium text-base-content">
           3. Extra configuration...
         </label>
       </form>
