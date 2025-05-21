@@ -26,6 +26,11 @@ jobs:
           node-version: 20
           cache: "npm"
 
+      - name: Movie into frontend folder
+        run: |
+          cd frontend
+          ls
+
       - name: Install dependencies
         run: npm ci
 
