@@ -1,15 +1,11 @@
-provider "aws" {
-  region = "eu-west-2"
-}
-
 terraform {
-  backend "s3" {
-    bucket = "b-a-p-tf-state-1612"
-    key    = "global/lambda_functions/terraform.state"
-    region = "eu-west-2"
+  required_version = "~> 1.12.0"
 
-    dynamodb_table = "b-a-p-1612-lock"
-    encrypt        = true
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
   }
 }
 
@@ -39,8 +35,9 @@ resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
 }
 
 data "archive_file" "hello_world" {
-  type        = "zip"
-  source_file = "${path.module}/../../backend/lambda_functions/helloFromLambda.py"
+  type = "zip"
+  # source_file = "${path.module}/../../backend/lambda_functions/helloFromLambda.py"
+  source_file = var.example_function_path
   output_path = "helloFromLambda.zip"
 }
 
