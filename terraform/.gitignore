@@ -1,0 +1,8 @@
+# ignore terraform provider files 
+**/.terraform/**
+
+# ignore lock file 
+.terraform.lock.hcl
+
+#   ignore any generated zip files 
+*.zip
