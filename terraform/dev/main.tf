@@ -43,3 +43,14 @@ module "static-website-bucket" {
   s3_bucket_name         = var.s3_bucket_name
   deployment_environment = var.deployment_environment
 }
+
+resource "aws_s3_object" "name" {
+  for_each = fileset("${path.module}/../../frontend/dist", "**/*")
+
+  bucket = module.static-website-bucket.bucket_id
+  key    = each.value
+  source = "${path.module}/../../frontend/dist/${each.value}"
+  etag   = filemd5("${path.module}/../../frontend/dist/${each.value}")
+
+  content_type = lookup(var.content-type, split(".", each.value)[length(split(".", each.value)) - 1], "application/octet-stream")
+}
