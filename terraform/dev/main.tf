@@ -11,6 +11,13 @@ terraform {
 
 provider "aws" {
   region = "eu-west-2"
+
+  default_tags {
+    tags = {
+      Owner     = "build-a-pipeline"
+      ManagedBy = "b-a-p-terraform"
+    }
+  }
 }
 
 terraform {
