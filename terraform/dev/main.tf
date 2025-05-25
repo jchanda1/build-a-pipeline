@@ -29,3 +29,10 @@ module "lambda_functions" {
 
   example_function_path = "${path.module}/../../backend/lambda_functions/helloFromLambda.py"
 }
+
+module "static-website-bucket" {
+  source = "./../modules/s3"
+
+  s3_bucket_name         = var.s3_bucket_name
+  deployment_environment = var.deployment_environment
+}
