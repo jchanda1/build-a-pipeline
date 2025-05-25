@@ -57,3 +57,6 @@ jobs:
       - name: Run Terraform Apply
         working-directory: terraform/dev
         run: terraform apply -var="s3_bucket_name=${{ vars.BUCKET_NAME_TF }}" -auto-approve
+
+      - name: Invalidate CloudFront distribution
+        run: aws cloudfront create-invalidation --distribution-id ${{ vars.DISTRIBUTION_ID }} --paths "/*"
