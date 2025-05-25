@@ -1,0 +1,23 @@
+name: Trialing Submodule clone 
+
+on: 
+  workflow_dispatch:
+
+jobs: 
+  trying-out-submodules:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check out latest commit with submodules 
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+
+      - name: list directories 
+        run: ls
+
+      - name: list in b-a-p-terraform
+        working-directory: b-a-p-terraform
+        run: ls
+  
