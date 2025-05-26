@@ -18,6 +18,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
+          submodules: recursive
+          token: ${{  secrets.TERRAFORM_SUBMODULE_PAT }}
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -47,15 +49,15 @@ jobs:
           aws-region: eu-west-2
 
       - name: Run Terraform Init
-        working-directory: terraform/dev
+        working-directory: b-a-p-terraform/dev
         run: terraform init
 
       - name: Run Terraform Plan
-        working-directory: terraform/dev
+        working-directory: b-a-p-terraform/dev
         run: terraform plan -var="s3_bucket_name=${{ vars.BUCKET_NAME_TF }}"
 
       - name: Run Terraform Apply
-        working-directory: terraform/dev
+        working-directory: b-a-p-terraform/dev
         run: terraform apply -var="s3_bucket_name=${{ vars.BUCKET_NAME_TF }}" -auto-approve
 
       - name: Invalidate CloudFront distribution
