@@ -9,4 +9,6 @@ At the moment this is deployed as a static website in S3.
 
 This makes calls to an API Gateway which will spin up Lambda functions. These Lambda functions will get/put from a MondoDB instance in AWS, to provide snippets of code that are formed into the sample pipeline.
 
+The frontend and lambda functions are in a public repo, but the infrastructure is in a private repo that is imported as a submodule to the main repo. 
+
 Currently this project is in development and is not suitable for use. 
