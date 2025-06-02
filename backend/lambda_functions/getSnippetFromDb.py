@@ -13,7 +13,7 @@ def lambda_handler(event, context):
     body = {}
     statusCode = 200
     try:
-        if event['routeKey'] == "GET /example_bap_dynamo":
+        if event['routeKey'] == "GET /examplefetch":
             res = table.get_item(
                 Key = {
                     "stage":"install",
